@@ -13,6 +13,8 @@
 		D80E8A8029D397ED004B6685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80E8A7E29D397ED004B6685 /* Main.storyboard */; };
 		D80E8A8229D397EF004B6685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80E8A8129D397EF004B6685 /* Assets.xcassets */; };
 		D80E8A8529D397EF004B6685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80E8A8329D397EF004B6685 /* LaunchScreen.storyboard */; };
+		D80E8A8F29D3A377004B6685 /* FaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E8A8E29D3A377004B6685 /* FaceNode.swift */; };
+		D80E8A9A29D63DC7004B6685 /* ARVideoKit in Frameworks */ = {isa = PBXBuildFile; productRef = D80E8A9929D63DC7004B6685 /* ARVideoKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		D80E8A8129D397EF004B6685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D80E8A8429D397EF004B6685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D80E8A8629D397EF004B6685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D80E8A8E29D3A377004B6685 /* FaceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80E8A9A29D63DC7004B6685 /* ARVideoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,32 @@
 		D80E8A7729D397ED004B6685 /* MustacheARKit */ = {
 			isa = PBXGroup;
 			children = (
-				D80E8A7829D397ED004B6685 /* AppDelegate.swift */,
-				D80E8A7A29D397ED004B6685 /* SceneDelegate.swift */,
+				D80E8A8D29D39814004B6685 /* Storyboard */,
+				D80E8A8C29D397FA004B6685 /* Resources */,
 				D80E8A7C29D397ED004B6685 /* ViewController.swift */,
-				D80E8A7E29D397ED004B6685 /* Main.storyboard */,
-				D80E8A8129D397EF004B6685 /* Assets.xcassets */,
-				D80E8A8329D397EF004B6685 /* LaunchScreen.storyboard */,
-				D80E8A8629D397EF004B6685 /* Info.plist */,
+				D80E8A8E29D3A377004B6685 /* FaceNode.swift */,
 			);
 			path = MustacheARKit;
+			sourceTree = "<group>";
+		};
+		D80E8A8C29D397FA004B6685 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D80E8A8629D397EF004B6685 /* Info.plist */,
+				D80E8A7829D397ED004B6685 /* AppDelegate.swift */,
+				D80E8A7A29D397ED004B6685 /* SceneDelegate.swift */,
+				D80E8A8129D397EF004B6685 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D80E8A8D29D39814004B6685 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D80E8A7E29D397ED004B6685 /* Main.storyboard */,
+				D80E8A8329D397EF004B6685 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,9 @@
 			dependencies = (
 			);
 			name = MustacheARKit;
+			packageProductDependencies = (
+				D80E8A9929D63DC7004B6685 /* ARVideoKit */,
+			);
 			productName = MustacheARKit;
 			productReference = D80E8A7529D397ED004B6685 /* MustacheARKit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +135,9 @@
 				Base,
 			);
 			mainGroup = D80E8A6C29D397ED004B6685;
+			packageReferences = (
+				D80E8A9829D63DC7004B6685 /* XCRemoteSwiftPackageReference "ARVideoKit" */,
+			);
 			productRefGroup = D80E8A7629D397ED004B6685 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +167,7 @@
 			files = (
 				D80E8A7D29D397ED004B6685 /* ViewController.swift in Sources */,
 				D80E8A7929D397ED004B6685 /* AppDelegate.swift in Sources */,
+				D80E8A8F29D3A377004B6685 /* FaceNode.swift in Sources */,
 				D80E8A7B29D397ED004B6685 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 74AQA4M4HV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MustacheARKit/Info.plist;
+				INFOPLIST_FILE = MustacheARKit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 74AQA4M4HV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MustacheARKit/Info.plist;
+				INFOPLIST_FILE = MustacheARKit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D80E8A9829D63DC7004B6685 /* XCRemoteSwiftPackageReference "ARVideoKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AFathi/ARVideoKit";
+			requirement = {
+				branch = swift_5;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D80E8A9929D63DC7004B6685 /* ARVideoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D80E8A9829D63DC7004B6685 /* XCRemoteSwiftPackageReference "ARVideoKit" */;
+			productName = ARVideoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D80E8A6D29D397ED004B6685 /* Project object */;
 }
